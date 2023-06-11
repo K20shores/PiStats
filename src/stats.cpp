@@ -19,12 +19,10 @@ double get_temperature(){
     std::string line;
     if (std::getline(file, line)) {
       // Convert from millidegrees to degrees
-      temperature = std::stod(line);
-      std::cout << temperature / 1000.0d << std::endl;
+      temperature = std::stod(line) / 1000.0d;
     }
   }
 
-  std::cout << temperature << std::endl;
   return temperature;
 };
 
@@ -32,7 +30,6 @@ Stats get_hardware_stats() {
   Stats stats;
   stats.cpu.ncpus = std::thread::hardware_concurrency();
   stats.cpu.cpu_temperature = get_temperature();
-  std::cout << stats.cpu.cpu_temperature << std::endl;
   
   return stats;
 }
