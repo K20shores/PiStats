@@ -4,6 +4,9 @@
 
 add_library(pistats)
 
+target_compile_features(pistats PUBLIC cxx_std_17)
+
+
 target_include_directories(pistats
   PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
