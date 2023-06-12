@@ -18,6 +18,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${PROJECT_SOURCE_DIR}/cmake")
 
 ################
+# Dependencies
+include("cmake/dependencies.cmake")
+
+################
 # Add the target
 
 add_subdirectory(src)

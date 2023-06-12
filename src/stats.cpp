@@ -19,7 +19,7 @@ double get_temperature(){
     std::string line;
     if (std::getline(file, line)) {
       // Convert from millidegrees to degrees
-      temperature = std::stod(line) / 1000.0d;
+      temperature = std::stod(line) / 1000.0f;
     }
   }
 

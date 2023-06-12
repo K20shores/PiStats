@@ -25,6 +25,7 @@
       - Select "Paths and misc options" and set the "Local tarballs directory" to `/Volumes/RPI-Toolchain/tarballs`
       - Select "C Compiler" and key down to enable C++ and Fortran by pressing space bar on their options.
       - Determine the glibc version on your pi `ldd --version`. Then, select "C-library" and find the option for glibc version and set it appropriately
+      - Ensure that you choose the right bitness (32, 64) for your version of the pi and set this option
       - Save the configuration and exit the menu.
 - Open up `.config` and change `CT_ZLIB_VERSION` to "1.2.13"
 - Open up `.config` and comment out `CT_GLIBC_ENABLE_WERROR=y`
