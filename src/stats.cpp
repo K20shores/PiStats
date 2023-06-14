@@ -36,7 +36,6 @@ long double get_cpu_frequency(std::filesystem::path path) {
   else {
     std::string line;
     if (std::getline(file, line)) {
-      // Convert from millidegrees to degrees
       freq = std::stod(line) / 1e6;
     }
   }
