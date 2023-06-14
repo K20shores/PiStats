@@ -1,17 +1,17 @@
 # Define our host system
-SET(CMAKE_SYSTEM_NAME Linux)
-SET(CMAKE_SYSTEM_VERSION 1)
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_VERSION 1)
 
 # Define the cross compiler locations
-SET(CMAKE_C_COMPILER   ${RASPBERRY_TOOLCHAIN}/bin/arm-unknown-linux-gnueabi-gcc)
-SET(CMAKE_CXX_COMPILER ${RASPBERRY_TOOLCHAIN}/bin/arm-unknown-linux-gnueabi-g++)
+set(CMAKE_C_COMPILER   "${RASPBERRY_TOOLCHAIN}/bin/${TOOLCHAIN_PREFIX}-gcc")
+set(CMAKE_CXX_COMPILER "${RASPBERRY_TOOLCHAIN}/bin/${TOOLCHAIN_PREFIX}-g++")
 
 # Define the sysroot path for the RaspberryPi distribution in our tools folder 
-SET(CMAKE_FIND_ROOT_PATH ${RASPBERRY_TOOLCHAIN}/arm-unknown-linux-gnueabi/sysroot/)
+set(CMAKE_FIND_ROOT_PATH ${RASPBERRY_TOOLCHAIN}/${TOOLCHAIN_PREFIX}/sysroot/)
 
 # Use our definitions for compiler tools
-SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 
 # Search for libraries and headers in the target directories only
-SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)

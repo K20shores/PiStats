@@ -1,5 +1,5 @@
 #pragma once
 
-struct Stats;
+#include <pistats/stats.h>
 
 void publish_stats(const Stats& stats);

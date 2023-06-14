@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include <pistats/publish.h>
 #include <pistats/stats.h>
 

@@ -16,6 +16,7 @@ target_include_directories(pistats
 target_sources(pistats
   PRIVATE
     stats.cpp
+    publish.cpp
 )
 
 set_target_properties(pistats PROPERTIES 
