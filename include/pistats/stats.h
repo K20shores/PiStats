@@ -1,10 +1,14 @@
 #pragma once
 
 #include <stddef.h> 
+#include <vector>
 
 struct CPU {
   size_t ncpus{};
-  double cpu_temperature{}; // degrees C
+  // degrees C
+  double cpu_temperature{};
+  // MHz
+  std::vector<long double> cpu_frequency{};
 };
 
 struct Stats {
