@@ -39,9 +39,9 @@ ENV PATH="/home/ctnguser/ct-ng/bin:${PATH}"
 WORKDIR /home/ctnguser
 
 # Copy the configuration file
-COPY ct-ng.config .config
+COPY defconfig defconfig
 
-# RUN ct-ng upgradeconfig
+RUN ct-ng defconfig defconfig
 
 # Build the toolchain
 # RUN ct-ng build
