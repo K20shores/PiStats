@@ -26,8 +26,22 @@ double get_temperature(){
   return temperature;
 };
 
-long double get_cpu_frequency(std::filesystem::path) {
-  return 1234.0d;
+long double get_cpu_frequency(std::filesystem::path path) {
+  std::fstream file(path, std::ios_base::in);
+
+  long double freq = 0;
+  if (!file) {
+    std::cerr << "Failed to open the frequency file\n";
+  }
+  else {
+    std::string line;
+    if (std::getline(file, line)) {
+      // Convert from millidegrees to degrees
+      freq = std::stod(line) / 1e6;
+    }
+  }
+
+  return freq;
 }
 
 std::vector<long double> get_all_cpu_frequencies() {
