@@ -1,11 +1,10 @@
 #pragma once
 
 #include <stddef.h> 
-#include <vector>
 
 struct CPU {
   size_t ncpus{};
-  double cpu_temperature{}; // degrees
+  double cpu_temperature{}; // degrees C
 };
 
 struct Stats {
