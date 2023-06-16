@@ -4,6 +4,5 @@
 #include <pistats/stats.h>
 
 int main(){
-  Stats stats = get_hardware_stats();
-  publish_stats(stats);
+  publish_stats(Stats());
 }

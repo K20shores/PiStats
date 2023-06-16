@@ -1,6 +1,8 @@
 #pragma once
 
+#include <filesystem>
 #include <stddef.h> 
+#include <string>
 #include <vector>
 
 struct CPU {
@@ -23,8 +25,19 @@ struct Memory {
 };
 
 struct Stats {
-  CPU cpu{};
-  Memory memory{};
+    CPU cpu{};
+    Memory memory{};
+    std::string time;
+
+    Stats();
+
+private:
+    double get_temperature() const;
+    long double get_cpu_frequency(const std::filesystem::path& path) const;
+    std::vector<long double> get_all_cpu_frequencies() const;
+    Memory get_memory() const;
+    std::string get_time() const;
 };
+
 
 Stats get_hardware_stats();

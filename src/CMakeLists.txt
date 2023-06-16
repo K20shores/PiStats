@@ -19,6 +19,8 @@ target_sources(pistats
     publish.cpp
 )
 
+target_compile_options(pistats PRIVATE -Wno-psabi)
+
 set_target_properties(pistats PROPERTIES 
   ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib"
   VERSION ${PROJECT_VERSION}
